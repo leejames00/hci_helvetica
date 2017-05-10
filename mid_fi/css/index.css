@@ -11,6 +11,10 @@ body {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
+.no-border {
+  border: none;
+}
+
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: absolute;
@@ -39,7 +43,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 200px;
+  height: 75px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
