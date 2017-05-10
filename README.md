@@ -1,5 +1,5 @@
 # HCI TEAM Helvetica
 
-## Hello World
+## How to use prototype midfi
 
-### We have not implemented anything
+Starts with HTML file in midfi/implaments/index.html
