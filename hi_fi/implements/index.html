@@ -52,9 +52,9 @@
 					  <li class="col-sm-4 col-sm-offset-1">
 						<li id="imaginary_container"> 
 			   			  <li class="input-group stylish-input-group">
-							<input type="text" class="form-control"  placeholder="Search" >
+							<input id='search_input' type="text" class="form-control"  placeholder="Search" >
 							  <span class="input-group-addon">
-								  <button type="submit" onclick="location.href='search_result.html';"  >
+								  <button id='search_submit' type="submit">
 								    <span class="glyphicon glyphicon-search"></span>
 								  </button>
                   
@@ -89,17 +89,17 @@
 
       <h2>Item with stock</h2>
 
-      <div class="row">
-        
+      <div id='resultTable_stock' class="row">
       </div>
 
       <hr style="border-top: dotted 1px;" />
 
       <h2>No stock avialable</h2>
 
-      <div class="row">
-        
+      <div id='resultTable_nostock' class="row">
       </div>
+        
+    </div>
 
    <hr style="border-top: dotted 1px;" />
 
@@ -139,6 +139,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="../script/index.js"></script>
   </body>
 </html>
