@@ -121,6 +121,21 @@ function searchItemID (item_id){
 	});
 }
 
+function enterListner(e) {
+	if (e.keyCode == 13) {
+		if (search_input != ""){
+	        var search_input = $('#search_input').val();
+			searchItem(search_input);
+			searchTag(search_input);
+			return true;
+		}else {
+			console.log("search nothing");
+			//not implemented
+			//window.open('.html','1494164703883','width=300,height=200,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=1,left=0,top=0');
+		}
+    }
+}
+
 function tempPush(){
 	/*itemNumRef.once("value").then(function(snapshot) {
 		var item_id = snapshot.val();
