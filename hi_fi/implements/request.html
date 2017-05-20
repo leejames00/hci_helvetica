@@ -9,13 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Portfolio Item - Start Bootstrap Template</title>
+    <title>Helvetica</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
+   <!--  <link href="../css/portfolio-item.css" rel="stylesheet"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +29,7 @@
 <body>
 
     <!-- Navigation -->
-    <body>
+ <!--    <body>
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -64,7 +64,7 @@
         </nav>
 
       </div>
-    </div>
+    </div> -->
 
     <!-- Page Content -->
     <div class="container">
@@ -82,24 +82,25 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
-            <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
-                <button>Upload image or URL</button>
+            <div id="img_div" class="col-md-8">
+                <img id="up_img" class="img-responsive" src="http://placehold.it/750x500" alt="">
+                <input id="img"></input>
+                <button id="img_button">Upload image URL</button>
             </div>
 
             <div class="col-md-4">
                 <h3>Name</h3>
-                <input class="col-md-12"></input>
+                <input id="name" class="col-md-12"></input>
                 <h3>tag</h3>
-                <input class="col-md-12"></input>
+                <input id="tag" class="col-md-12"></input>
                 <h3>Description</h3>
-                <textarea rows="7" class="col-md-12">
+                <textarea id="description" rows="7" class="col-md-12">
                   
                 </textarea>
 
                 <div class="text-right">
-                        <a class="btn btn-success" href = "new1.html">submit</a>
-                        <a class="btn btn-success" href = "new1.html">cancel</a>
+                        <a id="submit" class="btn btn-success">submit</a>
+                        <a id="cancel" class="btn btn-success" href = "index.html">cancel</a>
                 
             </div>
 
@@ -118,18 +119,20 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+ <!--    <script src="js/jquery.js"></script> -->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!--     <script src="js/bootstrap.min.js"></script> -->
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script src="../script/request.js"></script>
 
 </body>
 
