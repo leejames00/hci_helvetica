@@ -57,15 +57,45 @@ itemRef.on("value", function(snapshot) {
 		if(item[0]["seller_num"]>0)
 		{
 			$("#contents_table").append(`<div id="in_stock" class="col-md-4">
-						<span id="to_cart" class="btn btn-success" onclick="location.href='shopping_cart.html'"> To Shopping Cart </span>
+						<span id="to_cart" class="btn btn-success" onclick="location.href='./shopping_cart.html'"> To Shopping Cart </span>
 						<span id="to_buy" class="btn btn-primary" onclick="location.href='shopping_done.html'"> Buy Now </span>
 
 					</div>`);
+					//onclick="location.href='shopping_cart.html'"
 			$('#to_cart').click(function(){
-				cartRef.push({
-					item_name: item[0]["item_name"],
-					min_price: item[0]["min_price"],
+				//var item_exists = 
+				
+				cartRef.once('value', function(snapshot) {
+					var exists = false
+					var comments = snapshot.val()
+					if (comments != null) {
+					var childHTMLs = Object.keys(comments).map(function(key) {
+						var data = comments[key]
+							if (data.item_name == "nimbus 9000") {
+
+								//var qty = cartRef.ref('data')
+								var dataRef = firebase.database().ref('cart/' + key)
+								var qty = data.item_qty
+								qty++
+								dataRef.update({item_qty: qty})
+								
+								exists = true
+							}
+					})
+					}
+					
+					if (!exists) {
+						console.log("noitem")
+						cartRef.push({
+							item_name: item[0]["item_name"],
+							min_price: item[0]["min_price"],
+							item_qty: 1
+						})
+					}
 				})
+
+				alert("Added to Shopping Cart")
+				//location.href = "../implements/shopping_cart.html"
 			})
 
 			$("#contents_table").append(`<div class="ratings">
@@ -95,9 +125,3 @@ itemRef.on("value", function(snapshot) {
                     `)
 		}
 });
-
-//alert(items)
-
-
-//display()
-//alert("???")
