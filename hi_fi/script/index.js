@@ -34,6 +34,12 @@ function onclickSearch(){
     });
 }
 
+function onclickCart(){
+	$('#shopping-cart-button').click(function() {
+		location.href = "shopping_cart.html?user_id=" + 0;
+    });
+}
+
 function refresh_item_table(){
 	$("#resultTable_stock div").remove();
 	$("#resultTable_nostock div").remove();
@@ -195,4 +201,5 @@ function tempPush(){
 //Main
 
 onclickSearch();
+onclickCart();
 tempPush();
